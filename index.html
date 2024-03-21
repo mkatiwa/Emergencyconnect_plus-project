@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lobster&family=Montserrat:wght@1,500;600;700&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link href="css/ekko-lightbox.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+     .bg-img {
+    background-image: url('images/first\ aid.jpeg');
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+  position: relative;
+  background-size: cover;
+}
+.navbar-brand{
+  text-align: left;
+  margin-left: 0px;
+}
+#collapsibleNavbar{
+  margin-right: 0px;
+}
+
+.h1-responsive{
+  font-size: xx-large;
+  margin-bottom: 100px;
+}
+.glimpse{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 50px;
+}
+.glim{
+  padding: 30px;
+  background-color: rgb(24, 239, 24);
+  margin: 30px;
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 5s;
+}
+.main h2{
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  color: rgb(10, 79, 10);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+  
+}
+.p1{
+  text-align: center;
+  margin: 20px;
+}
+.experience_delivery h3{
+  text-align: center;
+  color: rgb(10, 79, 10);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+.experience{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr ; */
+  margin: 30px;
+}
+.experience img{
+  height: 400px;
+  width: 400px;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 0px;
+}
+.p2{
+  text-align: center;
+  color: rgb(10, 79, 10);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 150px;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: xx-large;
+  
+  
+}
+.proof{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+.experience_proof{
+  background-color:rgb(24, 239, 24);
+  margin: 10px;
+  text-align: center;
+  border-radius: 20px; 
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  cursor: pointer;
+  opacity: 5s;
+}
+.galley_display{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+.btn-lg{
+  background-color: chartreuse;
+}
+.galley_display img{
+  width: 300px;
+  height: 300px;
+  margin-right: 0px;
+}
+.Testimonial img{
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  border-radius: 50px;
+
+}
+@media (max-width: 768px){
+  .main h2{
+    font-size: 25px;
+  }
+  .text-center{
+    font-size: 25px;
+  }
+  .home-supporting-text{
+    font-size: 15px;
+  }
+  .glim{
+    font-size: small;
+  }
+  .experience{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .p2{
+    margin: 0px;
+    font-size: large;
+  }
+  .experience img{
+    margin: 0px;
+    align-items: center;
+    width: 100%;
+
+  }
+  .proof{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #Gallery{
+    display: grid;
+    
+  }
+  .galley_display{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    
+  }
+}
+
+
+@media (max-width: 1200px){
+  .glimpse {
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .galley_display{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    
+  }
+ 
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="img-responsive" src="images/agriculture-logo.jpg" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Quick access.html">Quick Access Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Community Responders.html">Community Responders</a></li>
+          <li class="nav-item"><a class="nav-link" href="Transport.html">Transport</a></li>
+          <li class="nav-item"><a class="nav-link" href="customers.html">Customers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li>
+            <!-- <div class="col-md-3 text-end"> -->
+              <button type="button" class="btn btn-outline-primary me-2">Login</button>
+              <button type="button" class="btn btn-primary">Sign-up</button>
+            <!-- </div>  -->
+          </li>   
+              
+        </ul>
+        
+      </div>  
+    </div>
+    <!-- /container -->
+   
+  </nav>
+  <!-- /Navbar -->
+
+  <!-- Main content -->
+<!-- background image -->
+<div class="bg-img">
+   <div class="overlay">
+      <!-- Home page content -->
+  <div class="home-page-content">
+    <h1 class="text-center home-page-text h1-responsive">Emergency connect plus system</h1>
+    <h5 class="text-center home-supporting-text">Supporting Health Care Mission by ensuring quick Emergency response.</h5>
+    <div class="home-buttons text-center fadeIn">
+     <a href="services.html"> <div class="btn homepage-btn-1 btn-lg mt-2">Services</div></a>
+    </div>
+  </div>
+  <!-- /Home page content -->
+   </div>
+   <!-- /bg-img -->
+   
+</div>
+<!-- /view -->
+
+<!-- /main content -->
+<section class="main">
+  <div>
+    <h2> Have the glimpse of our services</h2>
+    <div class="glimpse">
+    <span class="glim" >Quick services</span>
+    <span class="glim">community Act</span>
+    <span class="glim">communication</span>
+    <span class="glim">First Aid Training</span>
+  </div>
+    <div>
+      <p class="p1">The specified software is an Agricultural products management system (APMS) developed to facilitate, 
+        streamline, and connect different aspects of agricultural operations for farmers in South Sudan. 
+        The main goal is to empower farmers with digital tools to optimize their farming practices, improve 
+        production product utilization, and facilitate better access to the market. The system addresses the challenges 
+        farmers face in the region, including market access, land cultivation, and farm exposure. The key features include
+        farmers' interests, crop specification, equipment sharing like tractors, transportation, and mobile-friendly design
+        (responsive on all devices). The benefit consists of improved access to the market, better utilization of resources,
+        knowledge sharing, and improved production of agricultural products. The goal is to enhance Agricultural practice, 
+        reduce post-harvest losses, and empower farmers.
+      </p>
+    </div>
+  <div class="experience_delivery">
+    <h3>Our experience in services delivery</h3>
+    <div class="experience">
+      <p class="p2">We have ten years of experience, we have impacted more than 20k
+        life in the interval of 10 year period</p>
+      <img src="images/EXPER.jpg" alt="">
+    </div>
+    <div class="proof">
+      <div class="experience_proof">
+        <span>30k</span>
+        <p>Engaging farmers tractors and Customers</p>
+      </div>
+      <div class="experience_proof">
+        <span>20k</span>
+        <p>Life Reach</p>
+      </div>
+      <div class="experience_proof">
+        <span>10+ years</span>
+        <p> Working experience</p>
+      </div>
+    </div>
+    <section id="Gallery">
+      <h2>Images</h2>
+      <div class="galley_display">
+        <div>
+          <img src="images/animal disease outbreak.jpg" alt="hhhh"/>
+          <h4>Animal disease</h4>
+        </div>
+        <div>
+          <img src="images/fire emergency.jpeg" alt="ww"/>
+          <h4>Fire Emergency</h4>
+        </div>
+        <div>
+          <img src="images/flooding.jpeg" alt="wwwwq"/>
+          <h4>Flooding</h4>
+        </div>
+        <div>
+          <img src="images/pests outbreak on crops.jpeg" alt="wqwwq"/>
+          <h4>pests outbreak</h4>
+        </div>
+      </div>
+    </section> 
+    <section>
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Testimonial</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              
+            </div>
+            <div class="Testimonial">
+              <img src="images/wen Awuok.jpeg">
+              <h3 class="fs-2 text-body-emphasis">Manyok Ghai</h3>
+              <p>Agriculture has always been my dream since high school, i appreciate the developer of this app for making my dream come true.</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              
+            </div>
+            <div class="Testimonial">
+              <img src="images/BY7B0419.JPG">
+              <h3 class="fs-2 text-body-emphasis">Kur Malual</h3>
+              <p>I love Agriculture so much that is what made me to do business with the Agricultural product company and it had been helpful so far</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              
+            </div>
+            <div class="Testimonial">
+              <img src="images/khmis.jpg">
+              <h3 class="fs-2 text-body-emphasis">Gabriel</h3>
+              <p>Agricultural product management system had help me to acheive my dream by making all the processes simple for me</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">User Registration</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> User Registration</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">User Registration</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2024 Mawia Katiwa, Kitui, Kenya. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+</section>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
