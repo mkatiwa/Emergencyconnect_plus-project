@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="images/logo.jpg">
     <link rel="icon" type="image/png" sizes="128x128" href="images/logo.jpg">
     <link rel="icon" type="image/png" sizes="256x256" href="images/logo.jpg">
-  <title>APMS</title>
+  <title>EmCoP</title>
 
 
 <style>
@@ -118,7 +118,7 @@
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <img class="logo" src="images/agriculture-logo.jpg" alt="Logo">
-      <a class="navbar-brand" href="#"> <h2>APMS</h2></a>
+      <a class="navbar-brand" href="#"> <h2>EmCoP</h2></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -172,24 +172,9 @@
                 <div class="card align-items-center" >
                     <div class="card-body py-2">
                         <div class="card-title py-2">
-                            <h4 class="h4-responsive">How can we help?</h4>
+                            <h4 class="h4-responsive"></h4>
                         </div>
-                     <form name="submit-to-google-sheets" class="comment-form py-2" method="get" action="#">
-                        <div class="form-group py-2">
-                            <label for="name"><span class="sr-only">Name</span></label>
-                            <input type="text" placeholder="Name" id="name" name="Name" required>
-                        </div>
-                        <div class="form-group py-2">
-                            <label for="email"><span class="sr-only">Email:</span></label>
-                            <input type="email" placeholder="Email" id="email" name="Email" required>
-                        </div>
-                        <div class="form-group py-2">
-                            <label for="text-area"><span class="sr-only">Query or suggestion</span></label>
-                          <textarea name="Query or Suggestion" placeholder="Talk to us here..." id="textarea" cols="23" rows="3" required></textarea>
-                        </div>
-                        <div class="card-button">
-                          <button type="submit" class="btn btn-lg submit-btn" onclick="submitcontact()">Submit</button>
-                        </div>
+                     
                         <!-- <button type="submit" class="btn btn-lg submit-btn" onclick="submitcontact()">Submit</button> -->
                      </form>
                     </div>
@@ -285,7 +270,7 @@
         </div>
     
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          <p>© 2024, developed and designed by Kur Malual. All rights reserved.</p>
+          <p>© 2024, developed and designed by Katiwa Mawia. You Alert, We Rescue.</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
             <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
@@ -316,6 +301,46 @@
        
       }
       </script>
+
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="First Name" required>
+
+        <label for="name">Last Name:</label>
+        <input type="text" id="name" name="Last Name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required>
+    
+        <label for="message">location:</label>
+        <textarea id="message" name="location" required></textarea>
+
+        <label for="message">message:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <button type="submit">Submit</button>
+      </form>
+    
+      <div id="response"></div>
+    
+      <script>
+        const form = document.getElementById('contactForm');
+        const responseDiv = document.getElementById('response');
+    
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+    
+          const formData = new FormData(event.target);
+          const response = await fetch('/send-email', {
+            method: 'POST',
+            body: formData
+          });
+    
+          const result = await response.text();
+          responseDiv.textContent = result;
+          form.reset();
+        });
     <!-- /container -->
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
