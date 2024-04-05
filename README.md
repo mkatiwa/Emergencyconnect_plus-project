@@ -11,16 +11,7 @@ The system will enable two-way communication between users and emergency service
 5. Community First Responders Integration:
 The system will enable responders to collaborate with local community first responders or volunteer groups, integrating a system to alert nearby trained individuals for immediate assistance while awaiting professional emergency services.
 
-6. Offline Emergency Mode:
-The app will develop a feature allowing users to send emergency alerts even in areas with poor or no internet connectivity, addressing situations in remote locations.
-
-7. In-App Triage and Guidance:
-The system will provide basic triage and first aid guidance within the app, assisting users in performing immediate actions before professional help arrives.
-
-8. Testing and Quality Assurance:
-The system will conduct rigorous testing of all features to ensure functionality, security, and user-friendliness. This includes simulation of emergency scenarios to validate the effectiveness of the app.
-
-9. User Training and Education:
+ User Training and Education:
 Provide user training to ensure users are informed about app features, proper usage, and the importance of maintaining accurate and up-to-date information in their profiles.
 
 
