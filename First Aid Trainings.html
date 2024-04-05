@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="256x256" href="images/logo.jpg">
+  <title>EmCoP</title>
   <style>
     @media (max-width: 768px){
       .service-cards{
@@ -19,78 +26,126 @@
         grid-template-rows: repeat(6fr);
         width: 100%;
       }
-  
+      .img-responsive{
+        height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      }
     }
-   
+     .Hiring-btn{
+      color: lightgreen;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 15px;
+      background-color: white;
+      border-color: lightgreen;
+      font-weight: bolder;
+      border: solid;
+      margin: 15px;
+
+    }
+    .Hiring-btn:hover{
+      background-color: rgb(45, 225, 45);
+      color: white;
+    }
+    .Hiring-btn::after{
+      border: none;
+
+    }
+    .hide-form h4{
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 50px;
+    } 
+    .btn-primary{
+      margin: 10px;
+    }
+    .datetractors{
+      margin: 10px;
+    }
   </style>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img class="img-responsive" src="images/agriculture-logo.jpg" alt="Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <img class="logo" src="images/agriculture-logo.jpg" alt="Logo">
+          <a class="navbar-brand" href="#"> <h2>APMS</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="Quick access.html">Farms</a></li>
-              <li class="nav-item"><a class="nav-link" href="Community Responders.html">Tractors</a></li>
-              <li class="nav-item"><a class="nav-link" href="communication.html">Transport</a></li>
-              <li class="nav-item"><a class="nav-link" href="First Aid Trainings.html">Customers</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>   
-              <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
-              </div>     
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="Quick access.html">Quick Access</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Community Responders.html">community responders</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="First Aid Trainings.html">first Aid Trainings</a></li>
+              <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="customers.html">Customers</a></li> -->
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
             </ul>
-            
-          </div>  
+          </div>
         </div>
-        <!-- /container -->
-       
+        <div class="col-md-3 text-end">
+          <div id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="showSignupForm()">Sign Up</button>
+          </div>
+          
+          <div id="signupForm" style="display:none;">
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+            <button onclick="showLoginForm()">Login</button>
+          </div>
+          
+          <div id="welcomeMessage" style="display:none;">
+            <p>Welcome <span id="usernameDisplay"></span>!</p>
+            <button onclick="logout()">Logout</button>
+          </div>
+        </div>     
       </nav>
+      
+      <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <br>
+      <br>
+    <br>       
   <div class="container">
-
-    <h1 class="factory-heading h1-responsive text-center shadow py-3 mt-2">Tractors</h1>
+    <h1 class="factory-heading h1-responsive text-center shadow py-3 mt-2">First Aid Basic Trainings</h1>
     <div class="row justify-content-center factory-row py-4">
       <section id="services">
         <div class="service-cards">
           <div class="service-card">
-            <img src="images/Tractor 1.jpeg" alt="" />
+            <img src="images/Basic first Aid for Burns.jpg" alt="" />
   
-            <h4>Kubota Tractor</h4>
+            <h4>First Aid for Burns</h4>
             <p>
-              Location: Sherikat
             </p>
-            <p><span class="subtitle">Pricing</span> SSP 50000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+            <p><span class="subtitle"></span></p>
+            <p><span class="subtitle"></span></p>
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
           <div class="service-card">
-            <img src="images/Tractor2.jpeg" alt="" />
+            <img src="images/NosebleedFirstAid-2.png" alt="" />
   
-            <h4>Case IH tractor</h4>
+            <h4>First Aid for Nose bleeding</h4>
             <p>
-              Location: Jebel
+          
             </p>
-            <p><span class="subtitle">Pricing</span>: SSP 55000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+            <p><span class="subtitle"></span></p>
+            <p><span class="subtitle"></span></p>
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
           <div class="service-card">
-            <img src="images/Tractor3.jpeg" alt="" />
+            <img src="images/First Aid for road Accident.jpg" alt="" />
   
-            <h4>Tractor</h4>
+            <h4>First Aid for Road accident</h4>
             <p>
-             Location: Lologo 
+            
             </p>
-            <p><span class="subtitle">Pricing</span>: SSP 45000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+            
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
         </div>
       </section>
@@ -99,36 +154,94 @@
         
         <div class="service-cards">
           <div class="service-card">
-            <img src="images/tractor4 massey ferguson.webp" alt="" />
-            <h4>Massey ferguson</h4>
+            <img src="images/unconsiousness first aid.webp" alt="" />
+            <h4>unconsiousness First aid</h4>
             <p>
-              Location: Custom
+              
             </p>
-            <p><span class="subtitle">Pricing</span>: SSP 50000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+            
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
           <div class="service-card">
-            <img src="images/tractor5.jpg" alt="" />
-            <h4>Tractors PK</h4>
+            <img src="images/First AId for Electric shock.gif" alt="" />
+            <h4>First Aid for Electric SHock</h4>
             <p>
-              Location: Gudele
+ 
             </p>
-            <p><span class="subtitle">Pricing</span>: SSP 25000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+           
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
           <div class="service-card">
-            <img src="images/tractor6.jpeg" alt="" />
-            <h4>Kubota</h4>
+            <img src="images/choking baby first aid.jpg" alt="" />
+            <h4>First Aid for chocking Baby</h4>
             <p>
-              Location: Mapau
+        
             </p>
-            <p><span class="subtitle">Pricing</span>: SSP 250000 per hour</p>
-            <p><span class="subtitle">Availability</span>: Available</p>
-            <a href="#booking-form-submit"><button id="book-mountain-trek56" class="booking-btn" onclick="BookHere()">Hire</button></a>
+            
+            <a href="#Hiring-form"><button id="Hire-truck" class="Hiring-btn" onclick="HireHere()">Alert</button></a>
           </div>
     </div>
+    <div id="Hire-form" class="hide-form">
+      <h4>Alert</h4>
+      <form  id="Hiring-form" name="submit-to-google-sheet" method="post" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="First name" name="First name" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" name="First name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="Last name" name="Last name" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" name="Last name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="Username" name="Last name" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="Username" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="City" name="City" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationCustom03" name="City" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="Tractor name" name="Tractor name"  class="form-label">Tractors</label>
+          <select class="form-select" id="validationCustom04" name="Tractor name" required>
+            <option selected disabled value="">Choose...</option>
+              <option value="Kubota - SSP5000 per Hour">Kubota - SSP5000 per Hour</option>
+              <option value="Case IH tractor SSP55000 per Hour">Case IH tractor SSP55000 per Hour</option>
+              <option value="Tractor SSP45000 per Hour">Tractor SSP45000 per Hour</option>
+              <option value="Massey ferguson SSP5000 per Hour">Massey ferguson SSP5000 per Hour</option>
+              <option value="Tractors PK SSP25000 per Hour">Tractors PK SSP25000 per Hour</option>
+              <option value="Kubota SSP5000 per Hour">Kubota SSP5000 per Hour</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid Tractors.
+          </div>
+          <div class="datetractors">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="Date" required>
+          </div>
+        </div>
+       
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" onclick="HireForm()">Submit form</button>
+        </div>
+        <!-- <button class="btn btn-primary" type="submit" onclick="HireForm()">Submit form</button> -->
+      </form>
+    </div>
+    
     <div class="container">
         <footer class="py-5">
           <div class="row">
@@ -136,10 +249,10 @@
               <h5>Section</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
               </ul>
             </div>
       
@@ -147,10 +260,10 @@
               <h5>Section</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
               </ul>
             </div>
       
@@ -158,28 +271,28 @@
               <h5>Section</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
               </ul>
             </div>
       
             <div class="col-md-5 offset-md-1 mb-3">
-              <form>
+              <form id="Subscribe-form">
                 <h5>Subscribe to our newsletter</h5>
                 <p>Monthly digest of what's new and exciting from us.</p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                   <label for="newsletter1" class="visually-hidden">Email address</label>
                   <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-primary" type="button">Subscribe</button>
+                  <button class="btn btn-primary" type="button" onclick="Subscribe()">Subscribe</button>
                 </div>
               </form>
             </div>
           </div>
       
           <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>© 2024 Kur Malual, Juba, South Sudan. All rights reserved.</p>
+            <p>© 2024, developed and designed by Katiwa Mawia. You Alert, We Rescue.</p>
             <ul class="list-unstyled d-flex">
               <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
               <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
@@ -192,6 +305,35 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      var navlinks = document.getElementById("collapsibleNavbar");
+
+      function showmenu(){
+        collapsibleNavbar.style.right = "0";
+      }
+      function hidemenu(){
+        collapsibleNavbar.style.right = "-2000px";
+      }
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzDDIDBhIaHKUV6Ot4kftTpJ4EQtRlD4YQ14ReDFzv7sI1mSWg-d7Ql9CM_gdOIhGohMg/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <script>
+      function HireForm() {
+        alert('Thank you for hiring our tractor, we are here to serve you.');
+        document.getElementById("Hire-form");
+       
+      }
+      </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>

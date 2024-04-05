@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="256x256" href="images/logo.jpg">
+  <title>APMS</title>
 
 
 <style>
@@ -105,37 +111,58 @@
   }
 
 }
+
 </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="img-responsive" src="images/agriculture-logo.jpg" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img class="logo" src="images/agriculture-logo.jpg" alt="Logo">
+      <a class="navbar-brand" href="#"> <h2>APMS</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="Quick access.html">Farms</a></li>
-          <li class="nav-item"><a class="nav-link" href="Community Responders.html">Tractors</a></li>
-          <li class="nav-item"><a class="nav-link" href="communication.html">Transport</a></li>
-          <li class="nav-item"><a class="nav-link" href="First Aid Trainings.html">Customers</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact Us.html">Contact Us</a></li>   
-          <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>     
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Quick access.html">Quick Access</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Community Responders.html">community responders</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="First Aid Trainings.html">first Aid Trainings</a></li>
+          <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="customers.html">Customers</a></li> -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact Us.html">Contact Us</a></li>
         </ul>
-        
-      </div>  
+        <form class="d-flex" role="search">
+        </form>
+      </div>
     </div>
-    <!-- /container -->
-   
+    <div class="col-md-3 text-end">
+      <div id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="showSignupForm()">Sign Up</button>
+      </div>
+      
+      <div id="signupForm" style="display:none;">
+        <input type="text" id="signupUsername" placeholder="Username">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="showLoginForm()">Login</button>
+      </div>
+      
+      <div id="welcomeMessage" style="display:none;">
+        <p>Welcome <span id="usernameDisplay"></span>!</p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>     
   </nav>
-    <div class="container">
+  
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div id="contact" class="container">
     <h1 class="h1-responsive clients-title text-center shadow-sm py-2">Talk to us</h1>
 
     <div class="contact-section">
@@ -147,24 +174,24 @@
                         <div class="card-title py-2">
                             <h4 class="h4-responsive">How can we help?</h4>
                         </div>
-                         <form class="comment-form py-2" action="">
-                      <div class="form-group py-2">
-                          <label for="name"><span class="sr-only">Name</span></label>
-                          <input type="text" placeholder="Name" id="name" required>
-                      </div>
-                      <div class="form-group py-2">
-                          <label for="email"><span class="sr-only">Email:</span></label>
-                          <input type="email" placeholder="Email" id="email" required>
-                      </div>
-                      <div class="form-group py-2">
-                          <label for="text-area"><span class="sr-only">Query or suggestion</span></label>
-                         <textarea name="textarea" placeholder="Talk to us here..." id="textarea" cols="23" rows="3" required></textarea>
-                      </div>
-                      <div class="card-button">
-                         <button type="submit" class="btn btn-lg submit-btn">Submit</button>
-                      </div>
-                     
-                  </form>
+                     <form name="submit-to-google-sheets" class="comment-form py-2" method="get" action="#">
+                        <div class="form-group py-2">
+                            <label for="name"><span class="sr-only">Name</span></label>
+                            <input type="text" placeholder="Name" id="name" name="Name" required>
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="email"><span class="sr-only">Email:</span></label>
+                            <input type="email" placeholder="Email" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group py-2">
+                            <label for="text-area"><span class="sr-only">Query or suggestion</span></label>
+                          <textarea name="Query or Suggestion" placeholder="Talk to us here..." id="textarea" cols="23" rows="3" required></textarea>
+                        </div>
+                        <div class="card-button">
+                          <button type="submit" class="btn btn-lg submit-btn" onclick="submitcontact()">Submit</button>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-lg submit-btn" onclick="submitcontact()">Submit</button> -->
+                     </form>
                     </div>
         
                 </div>
@@ -181,7 +208,14 @@
                   <h6 class="h6-responsive"><span><i class="fa fa-clock-o" aria-hidden="true"></i> </span> Weekends: 09:00-13:00</h6>
                   <h6 class="h6-responsive"><span><i class="fa fa-clock-o" aria-hidden="true"></i> </span> Public Holidays: 10:00-16:00</h6>
                     </div>
-
+                  
+                    <div class="socials py-2 mx-2">
+                      <h3 class="h3-responsive">Get in touch with us</h3>
+                      <hr>
+                      <h6 class="h6-responsive"><span> <i class="fa fa-envelope" aria-hidden="true"></i> </span>majokdit711@gmail.com</h6>
+                      <h6 class="h6-responsive"><span> <i class="fa fa-phone" aria-hidden="true"></i> </span>+211 924828569</h6>
+                      <h6 class="h6-responsive"><span> <i class="fa fa-home" aria-hidden="true"></i> </span>Juba, South Sudan<br></h6>
+                    </div>
                     
                     <!-- Social icons -->
    <div class="social py-3 text-center text-black" style="cursor: pointer;">
@@ -208,10 +242,10 @@
             <h5>Section</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
             </ul>
           </div>
     
@@ -219,10 +253,10 @@
             <h5>Section</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
             </ul>
           </div>
     
@@ -230,28 +264,28 @@
             <h5>Section</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
             </ul>
           </div>
     
           <div class="col-md-5 offset-md-1 mb-3">
-            <form>
+            <form id="Subscribe-form">
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
               <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">Email address</label>
                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                <button class="btn btn-primary" type="button">Subscribe</button>
+                <button class="btn btn-primary" type="button" onclick="Subscribe()">Subscribe</button>
               </div>
             </form>
           </div>
         </div>
     
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-          <p>© 2024 Kur Malual, Juba, South Sudan. All rights reserved.</p>
+          <p>© 2024, developed and designed by Kur Malual. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
             <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
@@ -264,8 +298,25 @@
     </div>
     <!-- /contact section -->
     </div>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzDDIDBhIaHKUV6Ot4kftTpJ4EQtRlD4YQ14ReDFzv7sI1mSWg-d7Ql9CM_gdOIhGohMg/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <script>
+      function submitcontact() {
+        alert('Thank you for contacting us, we will get back to you.');
+        document.getElementById("contact");
+       
+      }
+      </script>
     <!-- /container -->
-
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -8,12 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@100;200;300;400;500;531;600;700;800;900&family=Lobster&family=Montserrat:wght@1,500;600;700&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,500;1,400;1,500&family=Roboto:ital,wght@0,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link href="css/ekko-lightbox.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/logo.jpg">
+    <link rel="icon" type="image/png" sizes="256x256" href="images/logo.jpg">
+  <title>APMS</title>
   <style>
-     .bg-img {
+.bg-img {
     background-image: url('images/first\ aid.jpeg');
     height: 100vh;
     width: 100vw;
@@ -21,17 +28,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.container{
-  position: relative;
-  background-size: cover;
-}
-.navbar-brand{
-  text-align: left;
-  margin-left: 0px;
-}
-#collapsibleNavbar{
-  margin-right: 0px;
 }
 
 .h1-responsive{
@@ -46,7 +42,7 @@
 }
 .glim{
   padding: 30px;
-  background-color: rgb(24, 239, 24);
+  background-color: #008000;
   margin: 30px;
   color: white;
   font-weight: bolder;
@@ -77,7 +73,6 @@
 .experience{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 1fr ; */
   margin: 30px;
 }
 .experience img{
@@ -104,7 +99,7 @@
   grid-template-columns: 1fr 1fr 1fr; 
 }
 .experience_proof{
-  background-color:rgb(24, 239, 24);
+  background-color: #008000;
   margin: 10px;
   text-align: center;
   border-radius: 20px; 
@@ -114,21 +109,11 @@
   cursor: pointer;
   opacity: 5s;
 }
-.galley_display{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  text-align: center;
-}
 .btn-lg{
-  background-color: chartreuse;
-}
-.galley_display img{
-  width: 300px;
-  height: 300px;
-  margin-right: 0px;
+  background-color: #008000;
 }
 .Testimonial img{
-  background-color: blue;
+  background-color: #008000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -140,7 +125,11 @@
   border-radius: 50px;
 
 }
-@media (max-width: 768px){
+
+@media (max-width: 700px){
+  /* .experience_delivery h3{
+    font-size: medium;
+  } */
   .main h2{
     font-size: 25px;
   }
@@ -172,258 +161,489 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  #Gallery{
-    display: grid;
     
   }
-  .galley_display{
+  .img-responsive{
+        height: 500px;
+      width: 500px;
+      border-radius: 500px;
+      }
+    .text-end{
+      text-align: center;
+    }
+  
+@media (min-width: 768px) and (max-width: 1024px){
+  .card{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: 100%;
-    
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-body{
+    padding-right: 100px;
   }
 }
 
-
 @media (max-width: 1200px){
   .glimpse {
-    /* background-color: green; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  .galley_display{
+ 
+}
+
+@media (max-width: 7668px){
+      .logo{
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+      }
+    }
+    .logo{
+        height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      }
+      .carousel-item img {
+  /* Adjust width and height as needed */
+  width: 80%; 
+  height: 300px;
+  object-fit: cover; /* Maintain aspect ratio and crop  */
+}
+
+
+/* Media query for Nest Hub */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (min-height: 260px) and (max-height: 800px) {
+    .card{
+    
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 0;
+    padding: 0;
+    height: 550px;
+    width: 350px;
     
   }
- 
 }
   </style>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="img-responsive" src="images/agriculture-logo.jpg" alt="Logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img class="logo" src="images/logo.jpg" alt="Logo">
+      <a class="navbar-brand" href="#"> <h2>EmCoP</h2> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="Quick access.html">Quick Access Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="Community Responders.html">Community Responders</a></li>
-          <li class="nav-item"><a class="nav-link" href="communication.html">communication</a></li>
-          <li class="nav-item"><a class="nav-link" href="First Aid Trainings.html">First Aid Trainings</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact us.html">Contact Us</a></li>
-          <li>
-            <!-- <div class="col-md-3 text-end"> -->
-              <button type="button" class="btn btn-outline-primary me-2">Login</button>
-              <button type="button" class="btn btn-primary">Sign-up</button>
-            <!-- </div>  -->
-          </li>   
-              
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Quick access.html">Quick Access</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Community Responders.html">community responders</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="First Aid Trainings.html">first Aid Trainings</a></li>
+          <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="customers.html">Customers</a></li> -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact Us.html">Contact Us</a></li>
         </ul>
-        
-      </div>  
+        <!--  -->
+      </div>
     </div>
-    <!-- /container -->
-   
+    <div class="col-md-3 text-end">
+      <div id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="showSignupForm()">Sign Up</button>
+      </div>
+      
+      <div id="signupForm" style="display:none;">
+        <input type="text" id="signupUsername" placeholder="Username">
+        <input type="password" id="signupPassword" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="showLoginForm()">Login</button>
+      </div>
+      
+      <div id="welcomeMessage" style="display:none;">
+        <p>Welcome <span id="usernameDisplay"></span>!</p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>     
   </nav>
-  <!-- /Navbar -->
-
-  <!-- Main content -->
-<!-- background image -->
-<div class="bg-img">
-   <div class="overlay">
-      <!-- Home page content -->
-  <div class="home-page-content">
-    <h1 class="text-center home-page-text h1-responsive">Emergency connect plus system</h1>
-    <h5 class="text-center home-supporting-text">Supporting Health Care Mission by ensuring quick Emergency response.</h5>
-    <div class="home-buttons text-center fadeIn">
-     <a href="services.html"> <div class="btn homepage-btn-1 btn-lg mt-2">Services</div></a>
-    </div>
-  </div>
-  <!-- /Home page content -->
+  
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <br>
+  <br>
+  <div class="bg-img">
+    <div class="overlay">
+       <!-- Home page content -->
+   <div class="home-page-content">
+     <h1 class="text-center home-page-text h1-responsive">Emergency Connect Plus System</h1>
+     <h5 class="text-center home-supporting-text">Every community deserves best Healthcare services.</h5>
+     <div class="home-buttons text-center fadeIn">
+      <a href="services.html"> <div class="btn homepage-btn-1 btn-lg mt-2">About Us</div></a>
+     </div>
    </div>
-   <!-- /bg-img -->
-   
-</div>
-<!-- /view -->
+   <!-- /Home page content -->
+    </div>
+    <!-- /bg-img -->
+    
+ </div>
 
-<!-- /main content -->
-<section class="main">
-  <div>
-    <h2> Have the glimpse of our services</h2>
-    <div class="glimpse">
-    <span class="glim" >Quick services</span>
-    <span class="glim">community Act</span>
-    <span class="glim">communication</span>
-    <span class="glim">First Aid Training</span>
-  </div>
+
+  <section class="main">
     <div>
-      <p class="p1">The specified software is an Agricultural products management system (APMS) developed to facilitate, 
-        streamline, and connect different aspects of agricultural operations for farmers in South Sudan. 
-        The main goal is to empower farmers with digital tools to optimize their farming practices, improve 
-        production product utilization, and facilitate better access to the market. The system addresses the challenges 
-        farmers face in the region, including market access, land cultivation, and farm exposure. The key features include
-        farmers' interests, crop specification, equipment sharing like tractors, transportation, and mobile-friendly design
-        (responsive on all devices). The benefit consists of improved access to the market, better utilization of resources,
-        knowledge sharing, and improved production of agricultural products. The goal is to enhance Agricultural practice, 
-        reduce post-harvest losses, and empower farmers.
+      <h2>Have the glimpse of our services</h2>
+      <div class="glimpse">
+      <span class="glim" >Quick Access</span>
+      <span class="glim">Community Act</span>
+      <span class="glim">Communication</span>
+      <span class="glim">First Aid trainings</span>
+    </div>
+    <div>
+      <p class="p1">The Emergency Response website is designed to enhance and improve emergency 
+        services, focusing on healthcare-related emergencies. The system aims to provide quick access to emergency
+         services and enable users to share their location, improving the overall response time and potentially
+          saving lives. The system will give users a registration space to sign up and create a profile, giving
+           them an easy time during an emergency to report the case. The purpose is to provide quick
+            rescue to the emergency victims or else improve emergency services. This has been a great challenge
+             in Kenya, where victims lose their lives due to unattended or late attendance. This system
+              will solve the problem by providing quick two-way communication or alerts between the emergency 
+              victim and the respondents.
+
       </p>
     </div>
-  <div class="experience_delivery">
-    <h3>Our experience in services delivery</h3>
-    <div class="experience">
-      <p class="p2">We have ten years of experience, we have impacted more than 20k
-        life in the interval of 10 year period</p>
-      <img src="images/EXPER.jpg" alt="">
+    <div class="experience_delivery">
+      <h3>Our experience in services delivery</h3>
+      <div class="experience">
+        <p class="p2">
+          We have ten years of experience, and we have impacted more than 20,000 lives in a 10-year period.</p>
+        <img src="images/EXPER.jpg" alt="">
+      </div>
+      <div class="proof">
+        <div class="experience_proof">
+          <span>30k</span>
+          <p>Engaging emergency victims and Responders</p>
+        </div>
+        <div class="experience_proof">
+          <span>20k</span>
+          <p>Life Reach</p>
+        </div>
+        <div class="experience_proof">
+          <span>10+ years</span>
+          <p>Working experience</p>
+        </div>
+      </div>
+      <section id="Gallery">
+        <!-- <h2>Images</h2> -->
+        <div class="galley_display"></div>
+      </section> 
     </div>
-    <div class="proof">
-      <div class="experience_proof">
-        <span>30k</span>
-        <p>Engaging farmers tractors and Customers</p>
-      </div>
-      <div class="experience_proof">
-        <span>20k</span>
-        <p>Life Reach</p>
-      </div>
-      <div class="experience_proof">
-        <span>10+ years</span>
-        <p> Working experience</p>
+  </section>
+  <section>
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">Testimonial</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <img src="images/wen Awuok.jpeg">
+            <h3 class="fs-2 text-body-emphasis">Kelvin Lucas</h3>
+            <p>
+              Healthcare has always been my mission since high school, and I appreciate the 'Emergency Connect plus Company' for
+               developing this website
+               and making my dream come true. I'm now able to volunteer and solve the healthcare challenges in my
+                community by rescuing emergency victims hence saving lives.
+              </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <img src="images/BY7B0419.JPG">
+            <h3 class="fs-2 text-body-emphasis">Katiwa Mawia</h3>
+            <p>
+              Healthcare has always being my mission. I love saving lives in any way i can.
+               Unrescued or late rescues emergencies has killed a lot of people in my area. Some when 
+               rescued easly could have being saved but poor communication couldnt rescue any live. This is my 
+               motivation to create this website where victims and responders can communicate easly for a quick rescue.
+              </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <img src="images/khmis.jpg">
+            <h3 class="fs-2 text-body-emphasis">Marriana</h3>
+            <p>
+              The Emergency connect plus system helped me achieve my dream by 
+            making emergency rescuing orocess simple. Ever since 
+              I registered with this the company, I have had exponential growth in how to rescue emergencies.
+              </p>
+          </div>
+        </div>
       </div>
     </div>
-    <section id="Gallery">
-      <h2>Images</h2>
-      <div class="galley_display">
-        <div>
-          <img src="images/animal disease outbreak.jpg" alt="hhhh"/>
-          <h4>Animal disease</h4>
-        </div>
-        <div>
-          <img src="images/fire emergency.jpeg" alt="ww"/>
-          <h4>Fire Emergency</h4>
-        </div>
-        <div>
-          <img src="images/flooding.jpeg" alt="wwwwq"/>
-          <h4>Flooding</h4>
-        </div>
-        <div>
-          <img src="images/pests outbreak on crops.jpeg" alt="wqwwq"/>
-          <h4>pests outbreak</h4>
-        </div>
-      </div>
-    </section> 
-    <section>
-      <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Testimonial</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              
+  </section>
+  <section>
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">Meet Our Team</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+           <div class="card">
+            <div class="img-box p-1">
+                <img class="img-fluid img-top" src="images/k j.jpeg" alt="CEO, Founder" style="height: 250px; width: 250px;">
             </div>
-            <div class="Testimonial">
-              <img src="images/wen Awuok.jpeg">
-              <h3 class="fs-2 text-body-emphasis">Manyok Ghai</h3>
-              <p>Agriculture has always been my dream since high school, i appreciate the developer of this app for making my dream come true.</p>
+            <div class="card-body">
+               <div class="card-title">
+                  <h3 class="h3-responsive">Ngala Mary</h3>
+              </div>
+              <br>
+              <div class="card-subtitle">
+                <h5>Occupation: Doctor</h5>
+              </div>
+              <div class="card-text">
+                <h6>Contact: 0723224333</h6>
+                <p>Location: Mutulu</p>
+              </div>
+              <div class="teams-socials m-1">
+                  <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                  <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                  <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                </div> 
             </div>
           </div>
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              
-            </div>
-            <div class="Testimonial">
-              <img src="images/BY7B0419.JPG">
-              <h3 class="fs-2 text-body-emphasis">Kur Malual</h3>
-              <p>I love Agriculture so much that is what made me to do business with the Agricultural product company and it had been helpful so far</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              
-            </div>
-            <div class="Testimonial">
-              <img src="images/khmis.jpg">
-              <h3 class="fs-2 text-body-emphasis">Gabriel</h3>
-              <p>Agricultural product management system had help me to acheive my dream by making all the processes simple for me</p>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <footer class="py-5">
-          <div class="row">
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">User Registration</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> User Registration</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">User Registration</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick Access</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Location sharing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Community First Responders</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Two way communication</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-md-5 offset-md-1 mb-3">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
-                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-primary" type="button">Subscribe</button>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <div class="card">
+              <div class="img-box p-1">
+                  <img class="img-fluid img-top" src="images/mary.jpg" alt="CEO, Founder" style="height: 250px; width: 250px;">
+              </div>
+              <div class="card-body">
+                 <div class="card-title">
+                    <h3 class="h3-responsive">Wafula komi</h3>
                 </div>
-              </form>
+                <br>
+                <div class="card-subtitle">
+                  <h5>Occupation: Ambulance Driver</h5>
+                </div>
+                <div class="card-text">
+                  <h6>Contact: 0723224333</h6>
+                  <p>Location: Township</p>
+                </div>
+                <div class="teams-socials m-1">
+                    <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                  </div> 
+              </div>
             </div>
           </div>
-      
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>© 2024 Mawia Katiwa, Kitui, Kenya. All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-            </ul>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
           </div>
-        </footer>
+          <div class="Testimonial">
+            <div class="card">
+              <div class="img-box p-1">
+                  <img class="img-fluid img-top" src="images/Ajok.jpeg" alt="CEO, Founder" style="height: 250px; width: 250px;">
+              </div>
+              <div class="card-body">
+                 <div class="card-title">
+                    <h3 class="h3-responsive">Shemak Tisho</h3>
+                </div>
+                <br>
+                <div class="card-subtitle">
+                  <h5>Occupation: Nurse</h5>
+                </div>
+                <div class="card-text">
+                  <h6>Contact: 0723224333</h6>
+                  <p>Location: Mutulu</p>
+                </div>
+                <div class="teams-socials m-1">
+                    <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <div class="card">
+              <div class="img-box p-1">
+                  <img class="img-fluid img-top" src="images/Mp.jpeg" alt="CEO, Founder" style="height: 250px; width: 250px;">
+              </div>
+              <div class="card-body">
+                 <div class="card-title">
+                    <h3 class="h3-responsive">Andrew Koech</h3>
+                </div>
+                <br>
+                <div class="card-subtitle">
+                  <h5>Occupation: Police officer</h5>
+                </div>
+                <div class="card-text">
+                  <h6>Contact: 0723224333</h6>
+                  <p>Location: Mutulu</p>
+                </div>
+                <div class="teams-socials m-1">
+                    <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <div class="card">
+              <div class="img-box p-1">
+                  <img class="img-fluid img-top" src="images/wani.jpg" alt="CEO, Founder" style="height: 250px; width: 250px;">
+              </div>
+              <div class="card-body">
+                 <div class="card-title">
+                    <h3 class="h3-responsive">Harsan Kabibi</h3>
+                </div>
+                <br>
+                <div class="card-subtitle">
+                  <h5>Occupation: Community responder</h5>
+                </div>
+                <div class="card-text">
+                  <h6>Contact: 0723224333</h6>
+                  <p>Location: Mutulu</p>
+                </div>
+                <div class="teams-socials m-1">
+                    <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            
+          </div>
+          <div class="Testimonial">
+            <div class="card">
+              <div class="img-box p-1">
+                  <img class="img-fluid img-top" src="images/WhatsApp Image 2024-03-31 at 2.22.11 AM.jpeg" alt="CEO, Founder" style="height: 250px; width: 250px;">
+              </div>
+              <div class="card-body">
+                 <div class="card-title">
+                    <h3 class="h3-responsive">Stella Kawira</h3>
+                </div>
+                <br>
+                <div class="card-subtitle">
+                  <h5>Occupation: First Aider</h5>
+                </div>
+                <div class="card-text">
+                  <h6>Contact: 0723224333</h6>
+                  <p>Location: Township</p>
+                </div>
+                <div class="teams-socials m-1">
+                    <i class="fa fa-facebook mx-1" data-toggle="tooltip" title="Like on facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter mx-1" data-toggle="tooltip" title="Follow on twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram mx-1" data-toggle="tooltip" title="Follow on instagram" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin mx-1" data-toggle="tooltip" title="Add on linkedin" aria-hidden="true"></i>
+                  </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quick services</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">community Responders</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Communication</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">First Aid Trainings</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form id="Subscribe-form">
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button" onclick="Subscribe()">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024, developed and designed by Katiwa Mawia. You Alert, We Rescue.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </div>
+    </footer>
   </div>
-</section>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
